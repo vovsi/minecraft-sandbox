@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "786839769626e91399cb759663da2ced",
+    "content-hash": "fd68e7be06876a865cf5bf6a4772107c",
     "packages": [
         {
             "name": "brick/math",
@@ -5507,6 +5507,49 @@
             "time": "2025-06-27T19:55:54+00:00"
         },
         {
+            "name": "thedudeguy/rcon",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thedudeguy/PHP-Minecraft-Rcon.git",
+                "reference": "ada4eb08304dfe9562192978444fbfc21a08a9ca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thedudeguy/PHP-Minecraft-Rcon/zipball/ada4eb08304dfe9562192978444fbfc21a08a9ca",
+                "reference": "ada4eb08304dfe9562192978444fbfc21a08a9ca",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Thedudeguy\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Churchwell",
+                    "email": "chris@chrischurchwell.com",
+                    "homepage": "http://chrischurchwell.com"
+                }
+            ],
+            "description": "Simple Rcon class for php.",
+            "homepage": "https://github.com/thedudeguy/PHP-Minecraft-Rcon",
+            "keywords": [
+                "minecraft",
+                "rcon"
+            ],
+            "support": {
+                "issues": "https://github.com/thedudeguy/PHP-Minecraft-Rcon/issues",
+                "source": "https://github.com/thedudeguy/PHP-Minecraft-Rcon/tree/master"
+            },
+            "time": "2017-05-25T06:50:00+00:00"
+        },
+        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "v2.3.0",
             "source": {
@@ -5718,6 +5761,56 @@
                 }
             ],
             "time": "2024-11-21T01:49:47+00:00"
+        },
+        {
+            "name": "vovsi/minecraft-rcon",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vovsi/minecraft-rcon.git",
+                "reference": "d54370127b987791332510eb36352a8331b50ac6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vovsi/minecraft-rcon/zipball/d54370127b987791332510eb36352a8331b50ac6",
+                "reference": "d54370127b987791332510eb36352a8331b50ac6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": "^8.4",
+                "thedudeguy/rcon": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^12.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ovsi\\MinecraftRcon\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vlad Ovsienko",
+                    "email": "vladovsienko0@gmail.com"
+                }
+            ],
+            "description": "Library with RCON commands for Minecraft server.",
+            "keywords": [
+                "minecraft",
+                "rcon"
+            ],
+            "support": {
+                "issues": "https://github.com/vovsi/minecraft-rcon/issues",
+                "source": "https://github.com/vovsi/minecraft-rcon/tree/1.0.1"
+            },
+            "time": "2025-07-06T12:41:48+00:00"
         },
         {
             "name": "webmozart/assert",

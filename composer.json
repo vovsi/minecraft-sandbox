@@ -1,17 +1,18 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/laravel",
+    "name": "vovsi/minecraft-sandbox",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "Sandbox for Minecraft server.",
     "keywords": [
         "laravel",
-        "framework"
+        "minecraft"
     ],
     "license": "MIT",
     "require": {
         "php": "^8.4",
         "laravel/framework": "^12.0",
-        "laravel/tinker": "^2.10.1"
+        "laravel/tinker": "^2.10.1",
+        "vovsi/minecraft-rcon": "^1.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
