@@ -5764,16 +5764,16 @@
         },
         {
             "name": "vovsi/minecraft-rcon",
-            "version": "1.0.1",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vovsi/minecraft-rcon.git",
-                "reference": "d54370127b987791332510eb36352a8331b50ac6"
+                "reference": "2baa56f1bd75a6567eb4e60fb5dec4c512b16e45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vovsi/minecraft-rcon/zipball/d54370127b987791332510eb36352a8331b50ac6",
-                "reference": "d54370127b987791332510eb36352a8331b50ac6",
+                "url": "https://api.github.com/repos/vovsi/minecraft-rcon/zipball/2baa56f1bd75a6567eb4e60fb5dec4c512b16e45",
+                "reference": "2baa56f1bd75a6567eb4e60fb5dec4c512b16e45",
                 "shasum": ""
             },
             "require": {
@@ -5788,7 +5788,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Ovsi\\MinecraftRcon\\": "src/"
+                    "Vovsi\\MinecraftRcon\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5808,9 +5808,9 @@
             ],
             "support": {
                 "issues": "https://github.com/vovsi/minecraft-rcon/issues",
-                "source": "https://github.com/vovsi/minecraft-rcon/tree/1.0.1"
+                "source": "https://github.com/vovsi/minecraft-rcon/tree/1.0.4"
             },
-            "time": "2025-07-06T12:41:48+00:00"
+            "time": "2025-07-08T10:57:02+00:00"
         },
         {
             "name": "webmozart/assert",

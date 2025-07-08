@@ -123,4 +123,5 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'player_username' => env('PLAYER_USERNAME', ''),
 ];

@@ -24,6 +24,8 @@ services:
             - DB_PASSWORD=${DB_PASSWORD}
         networks:
             - app-network
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
 
     nginx:
         image: nginx:1.23
