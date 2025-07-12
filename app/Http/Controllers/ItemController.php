@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ResourceSendRequest;
-use Illuminate\Foundation\Application;
+use App\Http\Requests\Item\SendRequest;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Routing\Redirector;
 use Vovsi\MinecraftRcon\dto\item\GiveDto;
 use Vovsi\MinecraftRcon\Rcon;
 use Vovsi\MinecraftRcon\resources\ItemResource;
@@ -13,16 +12,27 @@ use Vovsi\MinecraftRcon\resources\ItemResource;
 class ItemController extends Controller
 {
     /**
-     * @param ResourceSendRequest $request
-     * @param Rcon $rcon
-     * @return Application|RedirectResponse|Redirector|object
+     * @param string $username
+     * @return View
      */
-    public function send(ResourceSendRequest $request, Rcon $rcon)
+    public function sendForm(
+        #[\Illuminate\Container\Attributes\Config('app.player_username')] string $username
+    ): View
+    {
+        return view('item.send', ['username' => $username]);
+    }
+
+    /**
+     * @param SendRequest $request
+     * @param Rcon $rcon
+     * @return RedirectResponse
+     */
+    public function send(SendRequest $request, Rcon $rcon): RedirectResponse
     {
         if ($rcon->connect()) {
             $response = new ItemResource($rcon)->give(new GiveDto($request->username, $request->item, $request->amount));
         }
 
-        return redirect(route('home'))->with('status', $response);
+        return redirect(route('item.send'))->with('status', $response);
     }
 }

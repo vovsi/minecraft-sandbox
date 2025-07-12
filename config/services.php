@@ -35,4 +35,7 @@ return [
         ],
     ],
 
+    'minecraft' => [
+        'token' => env('MINECRAFT_WEBHOOK_TOKEN'),
+    ],
 ];

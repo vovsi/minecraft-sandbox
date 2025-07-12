@@ -2,5 +2,6 @@
 
 return [
     App\Providers\AppServiceProvider::class,
-    App\Providers\RconProvider::class,
+    App\Providers\RconServiceProvider::class,
+    App\Providers\WebhookServiceProvider::class,
 ];

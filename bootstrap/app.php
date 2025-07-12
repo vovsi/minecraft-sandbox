@@ -11,7 +11,12 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        $middleware->alias([
+            'webhook.token' => \App\Http\Middleware\VerifyWebhook::class,
+        ]);
+        $middleware->append([
+            \App\Http\Middleware\RequestLog::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
