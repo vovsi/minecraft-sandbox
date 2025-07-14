@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\Item\SendRequest;
+use App\Http\Components\Requests\Item\SendRequest;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Vovsi\MinecraftRcon\dto\item\GiveDto;
@@ -16,7 +16,7 @@ class ItemController extends Controller
      * @return View
      */
     public function sendForm(
-        #[\Illuminate\Container\Attributes\Config('app.player_username')] string $username
+        #[\Illuminate\Container\Attributes\Config('minecraft.player_username')] string $username
     ): View
     {
         return view('item.send', ['username' => $username]);

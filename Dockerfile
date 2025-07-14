@@ -9,7 +9,9 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     libonig-dev \
     zip \
-    && docker-php-ext-install zip pdo pdo_mysql mbstring
+    && docker-php-ext-install zip pdo pdo_mysql mbstring \
+    && pecl install redis  \
+    && docker-php-ext-enable redis
 
 # Install Composer
 COPY --from=composer:2.7.2 /usr/bin/composer /usr/bin/composer

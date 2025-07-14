@@ -15,7 +15,7 @@
 </head>
 <body
     class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18]">
-<nav class="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900 mb-6">
+<nav class="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <a href="{{ route('home') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="{{ Vite::asset('resources/images/icon.svg') }}" class="h-8" alt="Logo"/>
@@ -37,11 +37,16 @@
         </div>
     </div>
 </nav>
-<div
-    class="flex items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0">
+<div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 mb-1">
+    <div class="bg-green-600 h-2.5 rounded-full" style="width: {{ $minecraftOnlinePlayersPercent }}%"></div>
+</div>
+<div class="flex justify-between mb-6 ml-2 mr-2">
+    <span class="text-base font-medium text-green-600 dark:text-white">Online</span>
+    <span class="text-sm font-medium text-green-600 dark:text-white">{{ $minecraftOnlinePlayersCount }}/{{ $minecraftOnlinePlayersLimit }}</span>
+</div>
+<div class="flex items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0">
     <main class="flex max-w-[335px] w-full flex-col-reverse lg:max-w-4xl lg:flex-row">
-        <div
-            class="text-[13px] leading-[20px] flex-1 p-6 pb-12 lg:p-20 bg-white dark:bg-[#161615] dark:text-[#EDEDEC] shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] rounded-bl-lg rounded-br-lg lg:rounded-tl-lg lg:rounded-br-none">
+        <div class="text-[13px] leading-[20px] flex-1 p-6 pb-12 lg:p-20 bg-white dark:bg-[#161615] dark:text-[#EDEDEC] shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] rounded-bl-lg rounded-br-lg lg:rounded-tl-lg lg:rounded-br-none">
             @if (session()->has('status'))
                 <div class="bg-white p-6 mb-4">
                     <svg viewBox="0 0 24 24" class="text-green-600 w-16 h-16 mx-auto my-6">

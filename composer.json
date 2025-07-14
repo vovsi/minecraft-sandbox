@@ -12,6 +12,7 @@
         "php": "^8.4",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
+        "predis/predis": "^3.0",
         "vovsi/minecraft-rcon": "^1.0"
     },
     "require-dev": {

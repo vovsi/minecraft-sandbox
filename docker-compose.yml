@@ -70,6 +70,15 @@ services:
         networks:
             - app-network
 
+    redis:
+        image: redis:7-alpine
+        container_name: minecraft-sandbox-redis
+        restart: unless-stopped
+        ports:
+            - "6379:6379"
+        networks:
+            - app-network
+
 volumes:
     db_data:
 
