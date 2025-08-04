@@ -37,7 +37,7 @@ It uses a custom microservice package – [minecraft-rcon](https://github.com/vo
 git clone https://github.com/vovsi/minecraft-sandbox.git
 cd minecraft-sandbox
 cp .env.example .env
-docker-compose up -d --build
+docker compose up --build -d
 ```
 
 The app will be available at:

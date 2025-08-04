@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     libonig-dev \
     zip \
+    netcat-openbsd \
     && docker-php-ext-install zip pdo pdo_mysql mbstring \
     && pecl install redis  \
     && docker-php-ext-enable redis
@@ -25,14 +26,17 @@ RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
 # Copy Laravel files
 WORKDIR /var/www/html
 COPY . .
+COPY entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
 
 # Set addictions Laravel
-RUN composer install --no-dev --optimize-autoloader
+RUN COMPOSER_ALLOW_SUPERUSER=1 composer install --no-dev --optimize-autoloader --no-scripts
 RUN npm install && npm run build
 
 # Set rights
 RUN chown -R 1000:1000 /var/www/html/storage /var/www/html/bootstrap/cache && \
-    chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+    chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache && \
+    chmod +x entrypoint.sh
 
 # Open port
 EXPOSE 80
